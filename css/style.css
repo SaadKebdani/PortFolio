@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,500&display=swap');
+:root{
+    --first-color:#f1f2f3;
+    --second-color:#8a6626;
+    --bg-color-1:#efc8b1;
+    --bg-color-2:#8a6626;
+    --light-color:#9fa1ad;
+    --padding: 8%;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+/*    */
+    
+}
+html{
+    font-family: 'Poppins', sans-serif;
+    color: var(--first-color);
+    font-size: 16px;
+    scroll-behavior: smooth;
+    
+}
+h3{
+/*  font-size: 2rem;  */
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--bg-color-1);
+    height: 3.5rem;/*3.5rem=3.5*16px=56px*/
+    align-items: center;
+    padding: 2rem var(--padding);
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 100;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+}
+ul li{
+    margin-left: 2rem;
+}
+ul li a{
+    color: var(--first-color);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 2s;
+}
+ul li a:hover{
+    color:var(--second-color);
+}
+span{
+    color: var(--second-color);
+}
+/*home*/
+.home{
+    background-color: var(--bg-color-1);
+    height: 100vh; /* la hauteur de lecran */          
+    padding: 0 var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+img{
+     width:100%;
+    
+}
+.image{
+    width: 35%;
+}
+h1{
+    font-size: 3rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+h4{
+    font-size: 1.25rem;
+}
+
+.title2{
+    margin: 1.7rem 0; /* top-bottom left-right*/
+        
+}
+.title3{
+    margin-bottom: 2rem;
+}
+.social{
+    margin-top: 2rem;
+}
+.btn{
+    background-color: var(--second-color);
+    border-radius: 30px;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: var(--first-color);
+    font-weight: 500;
+    border: 2px solid transparent; 
+    transition: 2s;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid var (--second-color);
+        
+}
+.social a i{
+    color: var(--light-color);
+    font-size: 1.5rem;
+    border: 1px solid var(--light-color);
+    border-radius:50%;
+    padding: 8px;
+    margin-right: 1rem;
+    transition:1s;
+    
+}
+.social a i:hover{
+    color: var(--second-color);
+    border: 1px solid var(--second-color);
+    transform: scale(1.2);
+    box-shadow: 3px 3px 3px;
+    
+    
+}
+a{
+    text-decoration: none;
+}
+
+.about{
+    background-color: var(--bg-color-1);
+    padding:2rem var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.about .image,.about .text{
+    width: 35%;
+    
+}
+p{
+    letter-spacing: 1px;
+    font-size: 1.5 rem;
+    line-height: 2.5rem;/* espace entre les lignes*/
+}
+h5{
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+
+.about span{
+    color: var(--bg-color-2);
+}
+/*services*/
+.services{
+    background-color: var(--bg-color-1);
+    padding: 2rem var(--padding);
+        
+}
+.services h1{
+    text-align: center;
+}
+.box{
+    display: flex; 
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.services .card{
+    width: 250px;
+    background-color: var(--bg-color-2);
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    text-align: center;
+}
+.card:hover{
+    box-shadow: 2px 2px 2px;
+}
+.services i {
+    color: var (--second-color);
+    font-size: 3.12rem;
+    margin-bottom: 1rem;
+}
+.srvices p {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/*Projects */
+
+.projects{
+    background-color: var(--bg-color-1);
+    padding: 2rem var(--padding);
+}
+
+.projects{
+    text-align: center;
+}
+
+.projects .card{
+    background-color: var(--bg-color-2);
+    width: 300px;
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    
+}
+
+.projects img {
+    border-radius: 5px;
+}
+.projects .card-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.projects i {
+    color: var(--first-color)
+}
+/*FOOTER */
+footer{
+   background-color: var(--bg-color-1);
+    padding: 2rem var(--padding);
+}
+footer p{
+    text-align: center;
+    font-style: italic;
+    font-size: 1rem;
+}
+.menu{
+    display: none;
+}
+/* Device width <575 px responsive*/
+
+@media screen and (max-width:575px){
+    :root{
+        --padding:1.5rem ;
+    }
+    ul{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        font-size: 1.5rem;
+    }
+    html{
+        font-size: 12px;
+    }
+    .home .image{
+        display: none;
+    }
+    .about{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .about .text{
+        width: 80%;
+    }
+    
+    .box{
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap;1rem;    
+    }
+    .services .box .card{
+        width: 400px;
+    }
+    .projects .box .card {
+        width: 400px;
+    }
+    .projects .box .card i {
+        font-size: 1.5rem;
+    }
+    .projects .box {
+        grid-gap: 1.5rem;
+    }
+}
+
+/* 574px<device<991px*/
+@media screen and (min-width:574px) and (max-width:991px){
+     :root{
+        --padding:4.5rem ;
+    }
+    ul{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        font-size: 1.5rem;
+    }
+    html{
+        font-size: 12px;
+    }
+    .home .image{
+        display: none;
+    }
+    .about{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .about .text{
+        width: 80%;
+    }
+    
+    .box{
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap;1rem;    
+    }
+    .services .box .card{
+        width: 400px;
+    }
+    .projects .box .card {
+        width: 400px;
+    }
+    .projects .box .card i {
+        font-size: 1.5rem;
+    }
+    .projects .box {
+        grid-gap: 1.5rem;
+    }
+}
+
+/*991px<device<1279*/
+
+@media screen and (min-width:991px) and (max-width:1279px){
+     :root{
+        --padding:1.5rem ;
+    }
+    ul{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        font-size: 1.5rem;
+    }
+    html{
+        font-size: 12px;
+    }
+    .home .image{
+/*        display: none;*/
+    }
+    .about{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .about .text{
+        width: 80%;
+    }
+    
+    .box{
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap;1rem;    
+    }
+    .services .box .card{
+        width: 400px;
+    }
+    .projects .box .card {
+        width: 400px;
+    }
+    .projects .box .card i {
+        font-size: 1.5rem;
+    }
+    .projects .box {
+        grid-gap: 1.5rem;
+    }
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
